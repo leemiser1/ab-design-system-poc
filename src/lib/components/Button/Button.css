@@ -1,0 +1,153 @@
+.btn {
+  /* Button-scoped vars (no design tokens exist for these exact values) */
+  --_py: 6px;
+  --_px: calc(var(--2) * 1px);
+  --_icon-size: 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--1) * 1px);
+  padding: var(--_py) var(--_px);
+  border-radius: calc(var(--borderradiusbutton) * 1px);
+  font-family: Klavika, var(--fontfamily-desktop), sans-serif;
+  font-size: calc(var(--typographybody2-desktop) * 1px);
+  font-weight: var(--fontweightmedium-desktop);
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  line-height: 1.75;
+  cursor: pointer;
+  border: 1px solid transparent;
+  min-width: 64px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 150ms ease, border-color 150ms ease,
+    box-shadow 150ms ease, filter 150ms ease;
+  white-space: nowrap;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* ── Sizes ── */
+.btn--small {
+  --_py: 4px;
+  --_px: 10px;
+  font-size: calc(var(--typographycaption-desktop) * 1px);
+}
+
+.btn--large {
+  --_py: 8px;
+  --_px: 22px;
+  font-size: calc(var(--typographybody1-desktop) * 1px);
+}
+
+/* ── Filled ── */
+.btn--filled {
+  background-color: var(--ab-purple700);
+  color: var(--primarycontrasttext-light-internal);
+  border-color: transparent;
+  box-shadow:
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn--filled:hover:not(:disabled) {
+  background-color: var(--ab-purple800);
+  box-shadow:
+    0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn--filled:focus-visible:not(:disabled) {
+  outline: 2px solid var(--primary_statesfocusvisible-light-internal);
+  outline-offset: 2px;
+}
+
+/* ── Outlined ── */
+.btn--outlined {
+  background-color: transparent;
+  color: var(--ab-purple700);
+  border-color: var(--primary_statesoutlinedborder-light-internal);
+}
+
+.btn--outlined:hover:not(:disabled) {
+  background-color: var(--primary_stateshover-light-internal);
+  border-color: var(--ab-purple700);
+}
+
+.btn--outlined:focus-visible:not(:disabled) {
+  outline: 2px solid var(--primary_statesfocusvisible-light-internal);
+  outline-offset: 2px;
+  border-color: var(--ab-purple700);
+}
+
+/* ── Text ── */
+.btn--text {
+  background-color: transparent;
+  color: var(--ab-purple700);
+  border-color: transparent;
+  padding-inline: calc(var(--1) * 1px);
+}
+
+.btn--text.btn--small {
+  padding-inline: calc(var(--05) * 1px);
+}
+
+.btn--text.btn--large {
+  padding-inline: 11px;
+}
+
+.btn--text:hover:not(:disabled) {
+  background-color: var(--primary_stateshover-light-internal);
+}
+
+.btn--text:focus-visible:not(:disabled) {
+  outline: 2px solid var(--primary_statesfocusvisible-light-internal);
+  outline-offset: 2px;
+}
+
+/* ── Disabled (all variants) ── */
+.btn:disabled {
+  cursor: not-allowed;
+  color: var(--actiondisabled-light-internal);
+  background-color: var(--actiondisabledbackground-light-internal);
+  border-color: transparent;
+  box-shadow: none;
+  filter: none;
+}
+
+/* ── Icons ── */
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--_icon-size);
+  height: var(--_icon-size);
+  flex-shrink: 0;
+}
+
+.btn__icon svg {
+  width: var(--_icon-size);
+  height: var(--_icon-size);
+  fill: currentColor;
+}
+
+/* ── Loading spinner ── */
+.btn__spinner {
+  display: inline-block;
+  width: calc(var(--2) * 1px);
+  height: calc(var(--2) * 1px);
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: btn-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

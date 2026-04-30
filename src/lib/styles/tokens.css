@@ -1,0 +1,123 @@
+:root {
+  /* ── Brand colors (raw) ── */
+  --ab-purple700: #4d3f91;
+  --ab-purple800: #2f2759;
+  --ab-blue700: #046ea0;
+
+  /* ── Primary state tokens — internal ── */
+  --primary_stateshover-light-internal: #4d3f910a;
+  --primary_statesfocus-light-internal: #4d3f911f;
+  --primary_statesfocusvisible-light-internal: #4d3f914d;
+  --primary_statesoutlinedborder-light-internal: #4d3f9180;
+  --primary_statesselected-light-internal: #4d3f9114;
+  --primarycontrasttext-light-internal: #ffffff;
+
+  /* ── Secondary tokens ── */
+  --secondarymain-light-internal: #757575;
+  --secondarydark-light-internal: #5c5c5c;
+  --secondarylight-light-internal: #969696;
+  --secondarycontrasttext-light-internal: #ffffff;
+  --secondary_stateshover-light-internal: #7575750a;
+  --secondary_statesfocus-light-internal: #7575751f;
+  --secondary_statesfocusvisible-light-internal: #7575754d;
+  --secondary_statesoutlinedborder-light-internal: #75757580;
+  --secondary_statesselected-light-internal: #75757514;
+
+  /* ── Text tokens ── */
+  --textprimary-light-internal: #000000de;
+  --textsecondary-light-internal: #00000099;
+  --textdisabled-light-internal: #00000061;
+
+  /* ── Background tokens ── */
+  --backgrounddefault-light-internal: #ffffff;
+  --backgroundpaper-light-internal: #ffffff;
+
+  /* ── Action tokens ── */
+  --actionhover-light-internal: #0000000a;
+  --actionselected-light-internal: #00000014;
+  --actionactive-light-internal: #0000008a;
+  --actiondisabled-light-internal: #00000042;
+  --actiondisabledbackground-light-internal: #0000001f;
+  --actionfocus-light-internal: #0000001f;
+
+  /* ── Divider ── */
+  --divider-light-internal: #0000001f;
+
+  /* ── Shape / border radius (unitless — use calc(var(--x) * 1px)) ── */
+  --borderradius: 4;
+  --borderradiusbutton: 100;
+  --borderradiuschip: 8;
+  --none: 0;
+
+  /* ── Spacing (unitless — use calc(var(--x) * 1px)) ── */
+  --05: 4;
+  --1: 8;
+  --2: 16;
+  --3: 24;
+  --4: 32;
+  --5: 40;
+  --6: 48;
+  --7: 56;
+  --8: 64;
+  --9: 72;
+  --10: 80;
+  --12: 96;
+
+  /* ── Typography ── */
+  --fontfamily-desktop: Arial;
+  --fontweightlight-desktop: 300;
+  --fontweightregular-desktop: 400;
+  --fontweightmedium-desktop: 500;
+  --fontweightsemibold-desktop: 600;
+  --fontweightbold-desktop: 700;
+  --typographyh1-desktop: 96;
+  --typographyh2-desktop: 60;
+  --typographyh3-desktop: 48;
+  --typographyh4-desktop: 32;
+  --typographyh5-desktop: 24;
+  --typographyh6-desktop: 20;
+  --typographybody1-desktop: 16;
+  --typographybody2-desktop: 14;
+  --typographycaption-desktop: 12;
+  --typographysubtitle1-desktop: 16;
+  --typographysubtitle2-desktop: 14;
+  --typographyoverline-desktop: 12;
+
+  /* ── Component tokens ── */
+  --_componentsinputoutlinedenabledborder-light-internal: #0000003b;
+  --_componentsinputoutlinedhoverborder-light-internal: #000000;
+  --_componentsinputfilledenabledfill-light-internal: #0000000f;
+  --_componentsinputfilledhoverfill-light-internal: #00000017;
+  --_componentschipdefaulthoverfill-light-internal: #0000001f;
+  --_componentschipdefaultfocusfill-light-internal: #00000033;
+  --_componentstooltipfill-light-internal: #616161e5;
+  --_componentssnackbarfill-light-internal: #323232;
+
+  /* ── Status tokens ── */
+  --error_stateshover-light-internal: #d32f2f0a;
+  --error_statesfocusvisible-light-internal: #d32f2f4d;
+  --error_statesoutlinedborder-light-internal: #d32f2f80;
+  --errorcontrasttext-light-internal: #ffffff;
+
+  /* ── Breakpoints (unitless) ── */
+  --xs: 444;
+  --sm: 600;
+  --md: 900;
+  --lg: 1200;
+  --xl: 1536;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fontfamily-desktop), sans-serif;
+  font-size: calc(var(--typographybody1-desktop) * 1px);
+  font-weight: var(--fontweightregular-desktop);
+  color: var(--textprimary-light-internal);
+  background-color: var(--backgrounddefault-light-internal);
+  margin: 0;
+}

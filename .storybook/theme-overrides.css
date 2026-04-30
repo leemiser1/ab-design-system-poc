@@ -1,0 +1,9 @@
+[data-theme="light-client"] {
+  --ab-purple700: #046ea0;
+  --ab-purple800: #035a82;
+  --primary_stateshover-light-internal: #046ea00a;
+  --primary_statesfocus-light-internal: #046ea01f;
+  --primary_statesfocusvisible-light-internal: #046ea04d;
+  --primary_statesoutlinedborder-light-internal: #046ea080;
+  --primary_statesselected-light-internal: #046ea014;
+}
